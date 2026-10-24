@@ -14,8 +14,8 @@ step — every page is hand-written HTML that links a single shared stylesheet.
 ├── 404.html                   Not-found page
 ├── styles.css                 Shared stylesheet for every page
 ├── nav.js                     Mobile menu toggle (vanilla JS)
-├── images/                    All site images (headshot, score covers)
-├── CNAME                      Custom domain (www.soundprairie.com)
+├── images/                    All site images (headshot, score covers,
+│                               favicon)
 └── README.md                  This file
 ```
 
