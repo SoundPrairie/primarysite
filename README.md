@@ -10,12 +10,14 @@ step — every page is hand-written HTML that links a single shared stylesheet.
 ├── index.html                 Home (/)
 ├── bio/index.html             Bio (/bio/)
 ├── store/index.html           Store (/store/)
+├── blog/index.html            Blog post list (/blog/)
+├── blog/_post-template/       Copy-and-rename starting point for a new post
 ├── contact/index.html         Contact (/contact/)
 ├── 404.html                   Not-found page
 ├── styles.css                 Shared stylesheet for every page
 ├── nav.js                     Mobile menu toggle (vanilla JS)
 ├── images/                    All site images (headshot, score covers,
-│                               favicon)
+│                               logos, favicons)
 └── README.md                  This file
 ```
 
@@ -61,10 +63,37 @@ sub-path without edits.
    price, description, an optional "Look Inside" link, and a Buy button.
    Sections alternate `block-light` / `block-dark`. To add a product, copy
    one section and edit it.
-7. Buy buttons and the Contact button are `mailto:` links to the placeholder
+7. The logo appears in the header (left of the SOUND PRAIRIE wordmark) and
+   above the home-page tagline, both using `images/logo-dark.png` (white and
+   red, for the black backgrounds). `images/logo-light.png` (gray and red)
+   is the version for white backgrounds.
+8. The favicon is `images/favicon.svg`, which switches between the gray mark
+   (light browser theme) and the white mark (dark browser theme).
+   `images/favicon.png` (gray) is the fallback for browsers that don't use
+   SVG favicons, such as Safari.
+9. Buy buttons and the Contact button are `mailto:` links to the placeholder
    address `your-email@example.com`. Buy links use the subject
    `Order: <title>` (URL-encoded, e.g. `?subject=Order%3A%20Suspended`).
    Replace each Buy `href` with a real checkout link when one exists.
+
+## Adding a blog post
+
+1. Copy the `blog/_post-template/` folder and rename the copy to the post's
+   URL slug, e.g. `blog/first-post/`. The post will live at `/blog/first-post/`.
+2. In the copy's `index.html`, replace `Post Title` (in `<title>` and `<h1>`),
+   `Month DD, YYYY`, and the paragraphs. Delete the
+   `<meta name="robots" content="noindex">` line.
+3. In `blog/index.html`, copy the example `<article class="post-item">` block
+   out of the HTML comment and paste it just below the comment (newest post
+   first). Fill in the date, title, summary, and slug, and delete the
+   `Posts coming soon.` line.
+
+Post pages sit two folders deep, so their paths use `../../` (e.g.
+`../../styles.css`); the template already has these set.
+
+The template folder starts with an underscore, so GitHub Pages' default
+Jekyll build leaves it out of the published site. On other hosts it is
+published, but its `noindex` tag keeps search engines from listing it.
 
 ## Previewing locally
 

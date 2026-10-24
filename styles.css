@@ -98,6 +98,11 @@ h1, h2, h3, h4, h5 {
   flex-shrink: 0;
 }
 
+.brand-logo {
+  height: 40px;
+  width: auto;
+}
+
 .brand-name {
   font-family: var(--font-head);
   font-weight: 600;
@@ -252,6 +257,12 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
 }
 
+.home-logo {
+  height: 220px;
+  width: auto;
+  margin: 0 auto 40px;
+}
+
 /* ---------- Bio page ---------- */
 
 .copy-block {
@@ -372,6 +383,53 @@ h1, h2, h3, h4, h5 {
   border-color: var(--red-dark);
 }
 
+/* ---------- Blog ---------- */
+
+.post-list {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.post-list > p {
+  color: var(--gray-text);
+  text-align: center;
+  margin: 0;
+}
+
+.post-item {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.post-item:first-child {
+  padding-top: 0;
+}
+
+.post-date {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 8px;
+}
+
+.post-item h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.post-item h2 a:hover {
+  color: var(--red);
+}
+
+.post-item p {
+  color: var(--gray-text);
+  margin: 0 0 16px;
+}
+
 /* ---------- Contact page ---------- */
 
 .contact-hero .btn {
@@ -461,6 +519,10 @@ h1, h2, h3, h4, h5 {
     display: block;
     padding: 16px 4px;
     font-size: 0.95rem;
+  }
+
+  .home-logo {
+    height: 160px;
   }
 
   .product {
